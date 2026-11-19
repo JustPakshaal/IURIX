@@ -1,0 +1,274 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #17243a;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 82px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.logo {
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.logo span {
+  color: #b18a45;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+}
+
+.nav-links a {
+  color: #536075;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #b18a45;
+}
+
+.login-btn,
+.search-box button {
+  background: #17243a;
+  color: white;
+  border: none;
+  padding: 13px 23px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.login-btn:hover,
+.search-box button:hover {
+  background: #263b5b;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 570px;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(180deg, #f8f9fb, #ffffff);
+}
+
+.hero-content {
+  max-width: 850px;
+  width: 100%;
+}
+
+.tag,
+.section-heading span {
+  color: #a47b35;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 6vw, 65px);
+  line-height: 1.2;
+  margin: 25px 0;
+}
+
+.hero h1 span {
+  color: #a47b35;
+}
+
+.hero-content > p {
+  max-width: 660px;
+  margin: auto;
+  color: #657186;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* SEARCH */
+
+.search-box {
+  display: flex;
+  max-width: 650px;
+  margin: 35px auto 18px;
+  padding: 7px;
+  background: white;
+  border: 1px solid #e4e8ee;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px #17243a0c;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 12px;
+}
+
+.search-message {
+  max-width: 650px;
+  margin: 15px auto;
+  padding: 18px;
+  text-align: left;
+  background: #f8f9fb;
+  border: 1px solid #e4e8ee;
+  border-radius: 8px;
+  color: #17243a;
+}
+
+.search-message p {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #657186;
+}
+
+.hero-note {
+  font-size: 12px;
+  color: #8992a1;
+  margin-top: 15px;
+}
+
+/* FEATURES */
+
+.features {
+  padding: 85px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  margin-top: 15px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  padding: 30px 24px;
+  border: 1px solid #e9edf2;
+  border-radius: 9px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px #17243a0d;
+}
+
+.feature-icon {
+  color: #b18a45;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.feature-card h3 {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: #758094;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+
+footer {
+  background: #17243a;
+  color: white;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+footer p {
+  color: #bdc6d3;
+  margin: 14px 0;
+}
+
+footer small {
+  display: block;
+  color: #8d9aab;
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 75px 20px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+}
